@@ -228,6 +228,25 @@ main h3 {
 	height: 100%;
 }
 
+/* TwitterをPCでは横並びにする */
+.flex {
+	display: flex; /* これで横並びになる */
+}
+.twitter-tweet {
+	padding: 5px; /* 1つのツイートの周りに5pxの余白をつける */
+	margin: 10px auto; /* ツイートを中央寄せにする */
+}
+
+/* 画面サイズ960px以下ではTwitterを縦並びに変える */
+@media (max-width: 960px) {
+.flex {
+	display: block; /* 横並びを解除 */
+}
+.twitter-tweet {
+	padding: 0; /* 縦並びでは余白なし */
+}
+}
+
 /*list
 .list-container {
 	display: flex;
