@@ -1,0 +1,55 @@
+body {
+    background-image: url('jsetc.images/家族いらすとや.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ベーススタイル */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+p1, input, button, p {
+    margin: 0.5em;
+    font-size: 1.2em;
+}
+
+input, button {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e7e7e7;
+}
+
+/* レスポンシブデザイン用のメディアクエリ */
+@media (max-width: 768px) {
+    html, body {
+        flex-direction: column;
+    }
+
+    p1, input, button, p {
+        font-size: 1em; /* スマートフォンではフォントサイズを小さくする */
+    }
+}
+
+@media (max-width: 480px) {
+    p1, input, button, p {
+        font-size: 0.8em; /* さらに小さい画面ではフォントサイズをさらに小さくする */
+    }
+}
