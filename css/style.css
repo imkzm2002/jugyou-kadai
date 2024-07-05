@@ -207,26 +207,6 @@ main h3 {
 	letter-spacing: 0.2em;	/*文字間隔を少し広くとる*/
 }
 
-.youtube {
-	width: 100%;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-.youtube .inner {
-	padding-top: 56.25%;
-	position: relative;
-	height: 0;
-	overflow: hidden;
-}
-
-.youtube .inner iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
 
 /* TwitterをPCでは横並びにする */
 .flex {
@@ -247,40 +227,57 @@ main h3 {
 }
 }
 
-/*list
-.list-container {
+/* 基本のスタイル */
+#WORKS {
+	padding: 20px;
+	background-color: #222; /* 黒系の背景色 */
+	color: #fff; /* テキストの色を白に設定 */
+  }
+  
+  .underBase h2 {
+	text-align: center;
+	margin-bottom: 20px;
+  }
+  
+  .movieCnt ul {
+	list-style: none;
+	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
-}
-.list {
-	height: 0;
-	width: 23%;
-	padding-top: 23%;
-	position: relative;
-	border-radius: 10px;
-	overflow: hidden;
-	margin: 1%;
-	box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-}
-.list a {
-	display: block;
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-}
-.list img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
-	transition: 0.5s;
-}
-.list img:hover {
-	transform: scale(1.1);
-	filter: contrast(1.3);
-} */
+	justify-content: center;
+  }
+  
+  .movieCnt li {
+	background-color: #333; /* グレー系の背景色 */
+	border: 1px solid #555;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 20px;
+	flex: 0 1 calc(100% - 40px); /* デフォルトではフル幅 */
+	box-sizing: border-box;
+	text-align: center;
+  }
+  
+  /* サムネイル画像のスタイル */
+  .movieThumb img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+  }
+  
+  /* デスクトップ用のスタイル */
+  @media (min-width: 768px) {
+	.movieCnt li {
+	  flex: 0 1 calc(50% - 40px); /* デスクトップでは2列 */
+	}
+  }
+  
+  @media (min-width: 1024px) {
+	.movieCnt li {
+	  flex: 0 1 calc(33.333% - 40px); /* より広い画面では3列 */
+	}
+  }
+  
 
 /*フッター設定
 ---------------------------------------------------------------------------*/
@@ -687,4 +684,3 @@ header #logo {
 /*　※注意！　下の閉じカッコ　}　はこのブロックに必要なので、削除しないで下さい。　*/
 
 }
-
