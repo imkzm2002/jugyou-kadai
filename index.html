@@ -64,47 +64,57 @@
 </dl>
 </section>
 
-<div id="PROFILE">
-    <img src="images/電動キックボード.jpg" alt="電動キックボード" class="profile-image">
+<div id="PROFILE" style="text-align: center;">
     <h2>PROFILE</h2>
-    <dl>
-        <dt>生年月日</dt>
-        <dd>皇紀2662年5月21日</dd>
-    </dl>
-    <dl>
-        <dt>出身</dt>
-        <dd>福岡県鞍手郡鞍手町</dd>
-    </dl>
-    <dl>
-        <dt>身長</dt>
-        <dd>約159cm</dd>
-    </dl>
-    <dl>
-        <dt>趣味</dt>
-        <dd>アイドル（地下アイドル）・コンカフェ・サッカー観戦など多趣味🤓</dd>
-    </dl>
-    <dl>
-        <dt>学歴</dt>
-        <dd>古月小学校→鞍手中学校→鞍手高校 理数科→九州産業大学 商学部 経営・流通学科（2025年3月卒業予定）</dd>
-    </dl>
+    <div class="profile-image">
+        <img src="images/電動キックボード.jpg" alt="九産ライダーと俺" class="profile-image" style="max-width: 100%; height: auto; display: inline-block;">
+    </div>
+    <div class="profile-info" style="display: inline-block; text-align: center; max-width: 100%; margin-top: 10px;">
+        <dl>
+            <dt>生年月日</dt>
+            <dd>皇紀2662年5月21日</dd>
+        </dl>
+        <dl>
+            <dt>出身</dt>
+            <dd>福岡県鞍手郡鞍手町</dd>
+        </dl>
+        <dl>
+            <dt>身長</dt>
+            <dd>約159cm</dd>
+        </dl>
+        <dl>
+            <dt>趣味</dt>
+            <dd>アイドル（地下アイドル）・コンカフェ・サッカー観戦など多趣味🤓</dd>
+        </dl>
+        <dl>
+            <dt>学歴</dt>
+            <dd>古月小学校→鞍手中学校→鞍手高校 理数科→九州産業大学 商学部 経営・流通学科（2025年3月卒業予定）</dd>
+        </dl>
+    </div>
 </div>
 
 <style>
-    .profile-image {
-        float: left;
-        margin-right: 20px; /* 画像とテキストの間隔を調整 */
-        max-width: 100%; /* 画像の幅が親要素に対して最大でいっぱいになるように */
-        height: auto; /* 高さを自動調整 */
+    @media (min-width: 769px) {
+        .profile-image, .profile-info {
+            max-width: 50%; /* 幅を最大50%に制限 */
+            display: inline-block; /* 横並びにする */
+            vertical-align: top; /* 上揃えにする */
+        }
+
+        .profile-info {
+            text-align: left; /* テキストを左寄せにする */
+            margin-left: 20px; /* 左のマージンを設定 */
+        }
     }
 
     @media (max-width: 768px) {
-        .profile-image {
-            float: none; /* モバイルビューでは画像を左揃えにする */
-            margin-right: 0; /* モバイルビューでは余白をなくす */
-            display: block; /* モバイルビューではブロックレベル要素として表示 */
+        .profile-image, .profile-info {
+            display: block; /* 縦並びにする */
+            text-align: center; /* テキストを中央寄せにする */
         }
     }
 </style>
+
 
 <div id="HOBBIES" class="bg2">
     <section class="up">
