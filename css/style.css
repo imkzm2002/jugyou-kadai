@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 /*リセットCSS（sanitize.css）の読み込み
 ---------------------------------------------------------------------------*/
 @import url("https://unpkg.com/sanitize.css");
@@ -140,9 +138,6 @@ header #logo {
 	height: 100%;	/*高さ*/
 }
 
-/*横長画像は非表示にしておく*/
-.mainimg-yoko {display: none;}
-
 
 /*メニュー
 ---------------------------------------------------------------------------*/
@@ -210,21 +205,23 @@ main h3 {
 
 /* TwitterをPCでは横並びにする */
 .flex {
-	display: flex; /* これで横並びになる */
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .twitter-tweet {
-	padding: 5px; /* 1つのツイートの周りに5pxの余白をつける */
-	margin: 10px auto; /* ツイートを中央寄せにする */
+	width: calc(33.33% - 20px); /* Adjust column width */
+    margin: 10px; /* Adjust spacing */
 }
 
-/* 画面サイズ960px以下ではTwitterを縦並びに変える */
-@media (max-width: 960px) {
-.flex {
-	display: block; /* 横並びを解除 */
-}
-.twitter-tweet {
-	padding: 0; /* 縦並びでは余白なし */
-}
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column; /* Stack tweets vertically on smaller screens */
+    }
+    .twitter-tweet {
+        width: 100%;
+        margin: 10px auto; /* Adjust spacing */
+    }
 }
 
 /* 基本のスタイル */
